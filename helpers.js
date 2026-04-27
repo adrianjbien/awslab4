@@ -94,7 +94,7 @@ var readJSONFile = function(fileName){
 	var data = fs.readFileSync(fileName, {encoding:'utf8'});
 	console.log(data);
 	var object = JSON.parse(data);
-	return object;	  	
+	return object;
 }
 
 exports.calculateDigest = calculateDigest; //= function(algorithm, text, encoding) e.g. calculateMultiDigest("md5", "some text", "hex")

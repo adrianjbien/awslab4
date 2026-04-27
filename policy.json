@@ -1,8 +1,11 @@
 {	"expiration" : {"day":1},
-	"conditions": [ ["starts-with", "$key", "radek.student/"],
-    				 {"bucket": "lab4-weeia"}, 
+	"conditions": [ ["starts-with", "$key", "adrian/"],
+    				 {"bucket": "adrian-awslab4-123"},
     				 {"acl": "private"},
-    				 {"success_action_redirect": "http://localhost:8080"},   
-    				 ["content-length-range", 0, 1048576]
+    				 {"success_action_redirect": "http://localhost:8080/digest"},
+    				 ["content-length-range", 0, 1048576],
+
+		["starts-with", "$x-amz-meta-name", ""],
+		["starts-with", "$x-amz-meta-ip", ""]
     				]   
 }
